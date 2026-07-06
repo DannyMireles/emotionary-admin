@@ -29,6 +29,8 @@ ADMIN_PASSWORD=choose-a-strong-admin-password
 ADMIN_SESSION_SECRET=openssl-rand-base64-32-output
 ```
 
+On Vercel, `AUTH_SECRET` can be used instead of `ADMIN_SESSION_SECRET`.
+
 Generate a session secret with:
 
 ```bash

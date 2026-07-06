@@ -11,7 +11,7 @@ function getPassword() {
 }
 
 function getSessionSecret() {
-  return process.env.ADMIN_SESSION_SECRET ?? "";
+  return process.env.ADMIN_SESSION_SECRET ?? process.env.AUTH_SECRET ?? "";
 }
 
 function sign(value: string) {

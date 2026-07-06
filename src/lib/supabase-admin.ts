@@ -33,7 +33,10 @@ function getSupabaseAdmin() {
     return adminClient;
   }
 
-  const url = requireEnv("SUPABASE_URL", DEFAULT_SUPABASE_URL);
+  const url = requireEnv(
+    "SUPABASE_URL",
+    process.env.NEXT_PUBLIC_SUPABASE_URL || DEFAULT_SUPABASE_URL,
+  );
   const serviceRoleKey = requireEnv("SUPABASE_SERVICE_ROLE_KEY");
 
   adminClient = createClient(url, serviceRoleKey, {
